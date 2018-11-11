@@ -1,0 +1,5 @@
+degisken="query_string='adi=can&soyadi=aydın&yas=35&il=izmir'"
+query_string , kalan = degisken.split('=',1)
+tırnak = kalan.replace("'","")
+yerlestir_dict = dict(pair.split('=') for pair in tırnak.split('&'))
+print({query_string : yerlestir_dict})
